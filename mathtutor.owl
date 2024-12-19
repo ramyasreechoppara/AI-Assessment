@@ -1,0 +1,78 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xml:base="http://example.org/mathtutor"
+         xmlns="http://example.org/mathtutor#">
+
+<owl:Ontology rdf:about="http://example.org/mathtutor"/>
+
+<owl:DatatypeProperty rdf:about="#HasArea">
+  <rdfs:domain rdf:resource="#Shape"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#HasSide">
+  <rdfs:domain rdf:resource="#Square"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#HasLength">
+  <rdfs:domain rdf:resource="#Rectangle"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#HasWidth">
+  <rdfs:domain rdf:resource="#Rectangle"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#HasBase">
+  <rdfs:domain rdf:resource="#Triangle"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#HasHeight">
+  <rdfs:domain rdf:resource="#Triangle"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+</owl:DatatypeProperty>
+
+<owl:Class rdf:about="#Shape">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Square">
+  <rdfs:subClassOf rdf:resource="#Shape"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Rectangle">
+  <rdfs:subClassOf rdf:resource="#Shape"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Triangle">
+  <rdfs:subClassOf rdf:resource="#Shape"/>
+</owl:Class>
+
+<owl:NamedIndividual rdf:about="#Square1">
+  <rdf:type rdf:resource="#Square"/>
+  <HasSide rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</HasSide>
+  <HasArea rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">25</HasArea>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Rectangle1">
+  <rdf:type rdf:resource="#Rectangle"/>
+  <HasLength rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</HasLength>
+  <HasWidth rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</HasWidth>
+  <HasArea rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">40</HasArea>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Triangle1">
+  <rdf:type rdf:resource="#Triangle"/>
+  <HasBase rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</HasBase>
+  <HasHeight rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</HasHeight>
+  <HasArea rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">24.0</HasArea>
+</owl:NamedIndividual>
+
+
+</rdf:RDF>
